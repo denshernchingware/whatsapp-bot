@@ -1,59 +1,154 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📱 WhatsApp Business Chatbot
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A keyword-driven WhatsApp chatbot for IT service businesses that handles service discovery, customer registration, and contact information — all through simple text commands.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📸 Screenshots
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 1. Main Menu
+The bot greets users with a numbered list of services and available commands.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+> Users type a number (1–5) to explore a service, or use keywords like `register`, `contact`, or `portfolio`.
 
-## Learning Laravel
+![Main Menu](./screenshots/menu.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2. Service Detail — Web Development
+Typing `1` returns a rich service card with an image, feature list, and pricing.
 
-## Laravel Sponsors
+![Web Development](./screenshots/web_dev.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+### 3. Service Detail — Cloud Solutions
+Typing `5` shows the Cloud Solutions card with features and starting price.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+![Cloud Solutions](./screenshots/cloud.png)
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 4. Registration Flow
+Typing `register` checks if the user is already registered and shows their saved details.
 
-## Code of Conduct
+![Register](./screenshots/register.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+### 5. Contact Information
+Typing `contact` returns the business address, phone, email, website, and business hours.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![Contact](./screenshots/contact.png)
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🤖 How It Works
+
+The bot listens for incoming WhatsApp messages and matches them against a set of **keywords** and **numbered commands**:
+
+| User Input | Bot Response |
+|------------|--------------|
+| `menu` | Shows the main services menu |
+| `1` | Web Development details |
+| `2` | Mobile App Development details |
+| `3` | Digital Marketing details |
+| `4` | UI/UX Design details |
+| `5` | Cloud Solutions details |
+| `register` | Registers user or shows existing details |
+| `contact` | Displays business contact info |
+| `portfolio` | Shows previous work/portfolio |
+
+---
+
+## 🛠️ Services Offered
+
+| # | Service | Starting Price |
+|---|---------|----------------|
+| 1 | 🌐 Web Development | ₹25,000 |
+| 2 | 📱 Mobile App Development | — |
+| 3 | 📊 Digital Marketing | — |
+| 4 | 🎨 UI/UX Design | — |
+| 5 | ☁️ Cloud Solutions | ₹30,000 |
+
+### Web Development Features
+- Custom website design
+- E-commerce solutions
+- CMS integration
+- SEO optimization
+- Maintenance & support
+
+### Cloud Solutions Features
+- Cloud migration
+- AWS / Azure / GCP setup
+- DevOps automation
+- Security & compliance
+- 24/7 monitoring
+
+---
+
+## 👤 User Registration
+
+When a user types `register`, the bot either:
+- **Registers them** as a new customer (collecting name & email), or
+- **Displays their existing details** if they've already signed up.
+
+**Example response for an existing user:**
+```
+✅ You're already registered!
+
+📝 Your Details:
+Name: Densher Chingware
+Email: densherchingware13@gmail.com
+
+Type 'menu' to see our services!
+```
+
+---
+
+## 📞 Contact Information
+
+```
+📧 Email:   info@yourbusiness.com
+📱 Phone:   +91 95817 35231
+🌐 Website: www.yourbusiness.com
+📍 Address: Kakinada, Andhra Pradesh, India
+
+🕐 Business Hours:
+   Mon–Fri: 9:00 AM – 6:00 PM
+   Sat:     10:00 AM – 4:00 PM
+```
+
+---
+
+## 🏗️ Tech Stack (Suggested)
+
+| Layer | Technology |
+|-------|------------|
+| Messaging API | [Twilio WhatsApp API](https://www.twilio.com/whatsapp) or [Meta Cloud API](https://developers.facebook.com/docs/whatsapp) |
+| Backend | Node.js / Python (Flask or FastAPI) |
+| Database | MySQL / MongoDB (for user registration) |
+| Hosting | AWS / Heroku / Railway |
+
+---
+
+## 🚀 Setup Overview
+
+1. **Connect a WhatsApp Business number** via Twilio or Meta Business API.
+2. **Set up a webhook** to receive incoming messages.
+3. **Implement keyword matching** logic in your backend.
+4. **Store registered users** in a database.
+5. **Deploy** and link the webhook URL to your WhatsApp number.
+
+---
+
+## 📌 Notes
+
+- All interactions are **text-based** — users never need to click buttons.
+- Service cards include an **image + description + features + price**.
+- The bot is designed for a **single-business IT services** use case but can be adapted for any domain.
+- Registration is **per WhatsApp number** — no separate login required.
+
+---
+
+*Built for IT service businesses looking to automate lead generation and customer engagement via WhatsApp.*

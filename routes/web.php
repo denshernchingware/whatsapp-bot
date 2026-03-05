@@ -12,7 +12,12 @@ Route::get('/home', function () {
 
 Route::get('/send-whatsapp', [WhatsAppController::class, 'sendWhatsappMessage'])->name("sendMessage");
 
-Route::post('/whatsapp/webhook', [WhatsAppController::class, 'webhook']);
+//Route::post('/whatsapp/webhook', [WhatsAppController::class, 'webhook']);
+//Route::get('/whatsapp/webhook', function () {  return response()->json(['status' => 'ok']);
+//});
+
+
+
 
 
 
