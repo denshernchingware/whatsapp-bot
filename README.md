@@ -14,35 +14,45 @@ The bot greets users with a numbered list of services and available commands.
 
 > Users type a number (1–5) to explore a service, or use keywords like `register`, `contact`, or `portfolio`.
 
-![Main Menu](./screenshots/menu.jpeg)
+<p align="center">
+  <img src="./screenshots/menu.jpeg" width="250" alt="Main Menu" />
+</p>
 
 ---
 
 ### 2. Service Detail — Web Development
 Typing `1` returns a rich service card with an image, feature list, and pricing.
 
-![Web Development](./screenshots/web.jpeg)
 
+<p align="center">
+  <img src="./screenshots//web.jpeg" width="250" alt="Main Menu" />
+</p>
 ---
 
 ### 3. Service Detail — Cloud Solutions
 Typing `5` shows the Cloud Solutions card with features and starting price.
 
-![Cloud Solutions](./screenshots/cloud.jpeg)
+<p align="center">
+  <img src="./screenshots//cloud.jpeg" width="250" alt="Main Menu" />
+</p>
 
 ---
 
 ### 4. Registration Flow
 Typing `register` checks if the user is already registered and shows their saved details.
 
-![Register](./screenshots/register.jpeg)
+<p align="center">
+  <img src="./screenshots//register.jpeg" width="250" alt="Main Menu" />
+</p>
 
 ---
 
 ### 5. Contact Information
 Typing `contact` returns the business address, phone, email, website, and business hours.
 
-![Contact](./screenshots/contact.jpeg)
+<p align="center">
+  <img src="./screenshots//contact.jpeg" width="250" alt="Main Menu" />
+</p>
 
 ---
 
@@ -128,16 +138,16 @@ Type 'menu' to see our services!
 
 | Layer | Technology |
 |-------|------------|
-| Messaging API | [Twilio WhatsApp API](https://www.twilio.com/whatsapp) or [Meta Cloud API](https://developers.facebook.com/docs/whatsapp) |
-| Backend | Node.js / Python (Flask or FastAPI) |
-| Database | MySQL / MongoDB (for user registration) |
-| Hosting | AWS / Heroku / Railway |
+| Messaging API | [Twilio WhatsApp API](https://www.twilio.com/whatsapp) |
+| Backend | Laravel|
+| Database | MySQL |
+| Hosting | local |
 
 ---
 
 ## 🚀 Setup Overview
 
-1. **Connect a WhatsApp Business number** via Twilio or Meta Business API.
+1. **Connect a WhatsApp Business number** via Twilio
 2. **Set up a webhook** to receive incoming messages.
 3. **Implement keyword matching** logic in your backend.
 4. **Store registered users** in a database.
@@ -154,4 +164,4 @@ Type 'menu' to see our services!
 
 ---
 
-*Built for IT service businesses looking to automate lead generation and customer engagement via WhatsApp.*
+*Built for businesses looking to automate lead generation and customer engagement via WhatsApp.*
